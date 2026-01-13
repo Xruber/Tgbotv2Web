@@ -1,0 +1,99 @@
+:root {
+    --bg-color: #0f0f13;
+    --card-bg: #1a1a24;
+    --primary: #00ff88; /* Green */
+    --danger: #ff0055;  /* Red */
+    --accent: #00ccff;  /* Blue */
+    --text: #ffffff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text);
+    font-family: 'Rajdhani', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border: 1px solid #333;
+}
+
+h1 { margin: 0; font-weight: 700; letter-spacing: 2px; }
+.pro-badge { background: var(--accent); color: #000; padding: 2px 6px; font-size: 12px; border-radius: 4px; }
+
+.control-group { margin: 20px 0; text-align: left; }
+label { display: block; font-size: 14px; color: #888; margin-bottom: 5px; }
+
+select {
+    width: 100%;
+    padding: 12px;
+    background: #000;
+    border: 1px solid #444;
+    color: #fff;
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+.toggle-buttons { display: flex; gap: 10px; }
+.time-btn {
+    flex: 1;
+    padding: 10px;
+    background: #000;
+    border: 1px solid #444;
+    color: #888;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.time-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(0, 204, 255, 0.1); }
+
+.prediction-card {
+    background: #000;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    margin: 20px 0;
+}
+
+.result-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #333;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+.result-circle.big { border-color: var(--danger); color: var(--danger); box-shadow: 0 0 15px var(--danger); }
+.result-circle.small { border-color: var(--primary); color: var(--primary); box-shadow: 0 0 15px var(--primary); }
+
+.trend-strip { display: flex; justify-content: center; gap: 5px; margin-top: 15px; font-size: 12px; }
+
+#predict-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(45deg, var(--accent), #00ffaa);
+    border: none;
+    border-radius: 10px;
+    color: #000;
+    cursor: pointer;
+}
+#predict-btn:active { transform: scale(0.98); }

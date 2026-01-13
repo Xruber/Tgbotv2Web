@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wingo V5+ Pro Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>WINGO V5+ <span class="pro-badge">PRO</span></h1>
+            <p>AI Neural Prediction System</p>
+        </div>
+
+        <div class="control-group">
+            <label>Select Platform</label>
+            <select id="platform">
+                <option value="Tiranga">🔴 Tiranga</option>
+                <option value="Rajagames">👑 RajaGames</option>
+                <option value="TrustWin">🛡️ TrustWin</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label>Timeframe</label>
+            <div class="toggle-buttons">
+                <button class="time-btn active" data-time="30s">30s</button>
+                <button class="time-btn" data-time="1m">1m</button>
+            </div>
+        </div>
+
+        <div class="card prediction-card">
+            <div class="period-box">
+                <span>Period</span>
+                <span id="period-display">WAITING...</span>
+            </div>
+            
+            <div class="result-circle" id="result-circle">
+                <span id="prediction-text">?</span>
+            </div>
+            
+            <div class="logic-info">
+                <span id="pattern-name">System Ready</span>
+            </div>
+
+            <div class="trend-strip" id="trend-strip">
+                </div>
+        </div>
+
+        <button id="predict-btn" class="glow-on-hover">GET PREDICTION</button>
+
+        <div class="status-bar" id="status-msg">v5.0.1 Connected</div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
